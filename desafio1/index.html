@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hora do dia</title>
+</head>
+<body onload="caregar()">
+    <h1>Hora do dia</h1>
+    <div id="caixa">
+        <p id="horas"></p>
+        <img id="imgg" src="https://www.encontrocomcristo.com.br/wp-content/uploads/2013/02/ora%C3%A7%C3%A3o-da-manh%C3%A3.jpg" alt="imagem de uma manhã">
+    </div>
+
+    <script>
+        function caregar() {
+            var img = window.document.getElementById('imgg')
+            var data = new Date()
+            var horas = data.getHours()
+            var p = window.document.getElementById('horas')
+            p.innerHTML = `Agora são ${horas} horas`
+            if (horas >= 0 && horas <= 11){
+                //de manhã
+                window.document.body.style.background = 'rgb(255, 255, 89)'
+                img.src = 'https://www.encontrocomcristo.com.br/wp-content/uploads/2013/02/ora%C3%A7%C3%A3o-da-manh%C3%A3.jpg'
+            }
+            if (horas >= 12 && horas <= 17){
+                //de tarde
+                window.document.body.style.background = 'orange'
+                img.src = 'img/detarde.jpg'
+            }
+            if (horas >= 18 && horas <= 23){
+                //de noite
+                window.document.body.style.background = 'gray'
+                img.src = 'https://img.freepik.com/vetores-gratis/ilustracao-de-noite-de-verao-gradiente-com-vista-para-a-praia_23-2149431145.jpg?q=10&h=200'
+            }
+        }
+    </script>
+</body>
+</html>

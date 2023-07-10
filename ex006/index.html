@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evendos DOM</title>
+    <style>
+        body {
+            background-color: rgb(133, 177, 133);
+        }
+        div#principal {
+            display: block;
+            margin: auto;
+            margin-top: 40vh;
+            height: 40px;
+            width: 100px;
+            background-color: rgb(238, 80, 80);
+            box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.37);
+        }
+        p {
+            color: white;
+            text-align: center;
+            padding: 9px;
+        }
+    </style>
+</head>
+<body>
+    <div id="principal">
+        <p>Clique</p>
+    </div>
+
+    <script>
+        var a = window.document.getElementById('principal')
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', PassouOMause)
+        a.addEventListener('mouseout', TirouOMause)
+
+        function clicar() {
+            a.innerHTML = '<p>Uhull</p>'
+        }
+
+        function PassouOMause() {
+            a.style.backgroundColor = 'orange'
+        }
+        
+        function TirouOMause() {
+            a.style.backgroundColor = 'rgb(238, 80, 80)'
+        }
+    </script>
+</body>
+</html>

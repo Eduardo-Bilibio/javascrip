@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If e Else</title>
+    <style>
+        p {
+            font-size: 2em;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dia da semana:</h1>
+    <p id="Dia"></p>
+    <script>
+        var p = window.document.getElementById('Dia')
+        var day = new Date()
+        var dayy = day.getDay()
+        switch (dayy) {
+            case 0:
+                p.innerHTML = 'Domingo'
+                break
+            case 1:
+                p.innerHTML = 'Segunda'
+                break
+            case 2:
+                p.innerHTML = 'Terça'
+                break
+            case 3:
+                p.innerHTML = 'Quarta'
+                break
+            case 4:
+                p.innerHTML = 'Quinta'
+                break
+            case 5:
+                p.innerHTML = 'Sexta'
+                break
+            case 6:
+                p.innerHTML = 'Sabado'
+                break
+        }
+    </script>
+</body>
+</html>

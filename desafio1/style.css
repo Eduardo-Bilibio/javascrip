@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+div#caixa {
+    width: 40vw;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.329);
+    padding-bottom: 15px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    font-size: 35px;
+}
+
+p {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+    color: rgb(255, 255, 89);
+}

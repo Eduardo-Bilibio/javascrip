@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores e DOM</title>
+</head>
+<body>
+    <h1 id='oi'>Uau, seja bem vindo ao meu site</h1>
+    <h2>Operadores e DOM</h2>
+    <p>gosto muito de programar, uhul</p>
+    <p class="aple">segundo paragrafo</p>
+    <div>
+        <ol>
+            <li id="bana">Banana</li>
+            <li>Maçã</li>
+            <li>Leite</li>
+            <li>Farinha</li>
+        </ol>
+    </div>
+    <script>
+        var n2 = 3 >= 3 || 37 - 14 == 24? 2 : 6
+        var n1 = (6 % 2) + (4**2) + (n2)
+        window.alert(`${n1}`)
+        // Selecionando elementos da arvore DOM
+        /*
+        podemos fazer por marca: getElementsByTagName(), dai coloca a tag, como
+        por exemplo 'p', se quiser alterar um pargrafo específico, tem que colocar
+         [x] (x é o numero do paragrafo, se quiser o primeiro, x = 0)
+        */
+        var p = window.document.getElementsByTagName('p')[0]
+        p.style.color = 'orange'
+        // podemos selecionar elemntos por id:
+        var item1 = window.document.getElementById('bana') // tem que ser aspas simples
+        item1.style.color = "Red"
+        // podemos selecionar por class:
+                //n ta funcionando
+        // podemos selecionar por query selector, que dai podemos usar css (só funciona nos pc mais atualizados):
+        window.document.querySelector('p.aple').style.color = "Red"
+    </script>
+</body>
+</html>

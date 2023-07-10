@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#ppp {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="num1" id="inum1"> +
+    <input type="number" name="num2" id="inum2">
+    <div id="ppp">Resultado</div>
+    <input type="button" value="Somar" onclick="calculus()">
+    <script>
+        function calculus() {
+            var r1 = window.document.getElementById('inum1')
+            var r2 = window.document.getElementById('inum2')
+            var res = window.document.getElementById('ppp')
+            var n1 = Number(r1.value)
+            var n2 = Number(r2.value)
+            var s = n1 + n2
+            res.innerHTML= `${s}`
+        }
+    </script>
+</body>
+</html>

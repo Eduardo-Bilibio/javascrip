@@ -3,4 +3,43 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, rgb(255, 255, 255), rgb(186, 190, 253));
+}
+
+section {
+    width: 238px;
+    padding: 30px;
+    background-color: rgb(79, 42, 165);
+    margin: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.288);
+}
+
+header {
+    background-color: gray; 
+    width: 278px;
+    height: 25px;
+    padding: 10px;
+    color: white;
+    margin: auto;
+    margin-top: 15vh;
+    font-size: 25px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+button {
+    padding: 20px;
+    margin: 2px;
+}
+
+p {
+    margin: 0;
+}
+
+button#zerar {
+    background-color: red;
+    color: white;
 }

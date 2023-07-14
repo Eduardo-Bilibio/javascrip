@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verificador de idade</title>
+</head>
+<body>
+    <header>
+        <h1>Verifique sua idade!</h1>
+    </header>
+    <main>
+        <label for="iano"><strong>Ano de nascimento:</strong></label>
+        <input type="number" name="qw" id="iano"><br>
+        <strong>Sexo: </strong> <label for="imacho">Homem</label><input type="radio" name="sexo" id="imacho">
+        <label for="ifemea">Mulher</label><input type="radio" name="sexo" id="ifemea"><br>
+        <button onclick="resultado()">Enviar</button>
+        <p id="txt">Preencha o formulario e veja o resultado</p>
+        <img id="foto" src="" alt="">
+    </main>
+
+    <script>
+        function resultado() {
+            var anoatual = new Date()
+            var anoreal = anoatual.getFullYear()
+            let img = window.document.getElementById('foto')
+            let txt = window.document.getElementById('txt')
+            let ano = window.document.getElementById('iano')
+            let sexo = document.getElementsByName('sexo')
+            var genero = ''
+            if (sexo[0].checked){
+                genero = 'homem'
+                img.src = 'https://img.freepik.com/fotos-gratis/retrato-de-homem-bonito-sorrindo_23-2148696628.jpg?q=10&h=200'
+            } else {
+                genero = 'mulher'
+                img.src = 'https://www.saopaulo.sp.gov.br/wp-content/uploads/2022/12/Secretaria-de-Politicas-para-as-Mulheres-Sonaira-Fernandes.jpg'
+            }
+            var idade = anoreal - Number(ano.value)
+            if (idade <= 0 || idade >= 120) {
+                window.alert('Verifique os dados')
+            } else {
+                txt.innerText = `Identificamos ${genero} com ${idade} anos`
+            }
+            
+        }
+    </script>
+</body>
+</html>

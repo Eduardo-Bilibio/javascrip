@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contador</title>
+</head>
+<body>
+    <header>
+        <h1>Contador de passos:</h1>
+    </header>
+    <main>
+        <div>
+            <label for="iano"><strong>Inicio: </strong></label>
+            <input type="number" name="qw" id="iano"><br>
+        </div>
+        <div>
+            <label for="ifim"><strong>Fim: </strong></label>
+            <input type="number" name="wq" id="ifim">
+        </div>
+        <div>
+            <label for="ipasso"><strong>Passo: </strong></label>
+            <input type="number" name="ww" id="ipasso">
+        </div>
+        <button onclick="resultado()">Calcular</button>
+        <p id="p">Preparando a contagem...</p>
+    
+    </main>
+
+    <script>
+        function resultado() {
+            var p = window.document.getElementById('p')
+            var iniciop = window.document.getElementById('iano')
+            var inicio = Number(iniciop.value)
+            var fimp = window.document.getElementById('ifim')
+            var fim = Number(fimp.value)
+            var passop = window.document.getElementById('ipasso')
+            var passo = Number(passop.value)
+            
+            p.innerText = 'Contando... '
+
+            if (passo > 0){
+                if (inicio >= fim){
+                    window.alert('O número de inicio não pode ser maior ou igual o fim se o passo é positivo')
+                }
+                else{
+                    while (fim > inicio){
+                        p.innerHTML += ` ${inicio} \u{1F449}`
+                        inicio += passo
+                    }
+                    p.innerHTML += ` ${fim}`
+                }
+            }
+            else if (passo < 0){
+                passo *= -1
+                if (inicio <= fim){
+                    window.alert('O número do inicio não pode ser menor ou igual ao fim se o passo é negativo')
+                }
+                else{
+                    while (inicio > fim) {
+                        p.innerHTML += ` ${inicio} \u{1F449}`
+                        inicio -= passo
+                    }
+                    p.innerHTML += ` ${fim}`
+                }
+            }
+            else {
+                window.alert('O número de passos não pode ser 0')
+            }
+        }
+    </script>
+</body>
+</html>
